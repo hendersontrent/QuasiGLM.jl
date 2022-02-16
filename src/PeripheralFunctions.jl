@@ -70,6 +70,9 @@ Arguments:
 """
 
 function coefarray(model::StatsModels.TableRegressionModel, ϕ::Real; level::Real=0.95)
+
+    # NOTE: Function modified from https://docs.juliahub.com/AxisIndices/AHOcZ/0.6.3/coeftable/
+
     cc = coef(model)
     se = stderror(model) * ϕ
     tt = cc ./ se
