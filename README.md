@@ -35,3 +35,18 @@ gm = fit(GeneralizedLinearModel, @formula(Counts ~ Outcome + Treatment), dobson,
 
 testOutputs = AdjustQuasiGLM(gm, dobson; level=0.95)
 ```
+
+## Citation instructions
+
+If you use `QuasiGLM.jl` in your work, please cite it using the following (included as BibTeX file in the package folder):
+
+```
+@Manual{QuasiGLM.jl,
+  title={{QuasiGLM.jl}},
+  author={Henderson, Trent},
+  year={2022},
+  month={2},
+  url={https://doi.org/10.5281/zenodo.5173723},
+  doi={10.5281/zenodo.5173723}
+}
+```
