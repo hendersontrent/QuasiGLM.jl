@@ -52,7 +52,7 @@ function AdjustQuasiGLM(model::StatsModels.TableRegressionModel, data::DataFrame
     # Render table
 
     println("\nCoefficients:")
-    CorrectedOutputsPretty = PrettyTables.pretty_table(CorrectedOutputs, header, tf = ctf)
+    CorrectedOutputsPretty = PrettyTables.pretty_table(CorrectedOutputs; header = header, tf = ctf)
 
     # Return results in a DataFrame for further use
 
