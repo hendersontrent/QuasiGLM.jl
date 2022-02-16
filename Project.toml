@@ -1,7 +1,13 @@
 name = "QuasiGLM"
 uuid = "e2a73505-cb16-4f72-bfa1-862ae24a0184"
-authors = ["Trent Henderson <trent.henderson1@outlook.com> and contributors"]
+authors = ["Trent Henderson <trent.henderson1@outlook.com>"]
 version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+GLM = "38e38edf-8417-5370-95a0-9cbb8c7f171a"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
 
 [compat]
 julia = "1"

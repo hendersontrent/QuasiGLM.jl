@@ -1,4 +1,4 @@
-using DataFrames, CategoricalArrays, GLM, Distributions, PrettyTables, Test
+using DataFrames, CategoricalArrays, GLM, Distributions, PrettyTables, QuasiGLM, Test
 
 #------------- Run package tests --------------
 
