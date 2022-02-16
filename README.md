@@ -4,7 +4,7 @@ Adjust Poisson and Binomial Generalised Linear Models to their quasi equivalents
 
 ## Installation
 
-You can install `QuasiGLM.jl` from the Julia Registry via:
+You can install `QuasiGLM.jl` from the Julia Registry once it has been accepted via:
 
 ```
 using Pkg
@@ -13,14 +13,14 @@ Pkg.add("QuasiGLM")
 
 ## Motivation
 
-`R` has an excellent interface for specifying [generalised linear models](https://en.wikipedia.org/wiki/Generalized_linear_model) (GLM) and its base functionality includes a wide variety of probability distributions and link functions. [`GLM.jl`](https://juliastats.org/GLM.jl/v0.11/) in `Julia` is also excellent with a very similar interface, however, two key GLMs are not readily available:
+`R` has an excellent interface for specifying [generalised linear models](https://en.wikipedia.org/wiki/Generalized_linear_model) (GLM) and its base functionality includes a wide variety of probability distributions and link functions. [`GLM.jl`](https://juliastats.org/GLM.jl/v0.11/) in `Julia` is also excellent, and boasts a similar (and also excellent!) interface. However, in `GLM.jl`, two key models are not readily available:
 
 1. quasipoisson
 2. quasibinomial
 
 While neither defines an explicit probability distribution, these models are useful in a variety of contexts as they enable the modelling of overdispersion in data. If the data is indeed overdispersed, the estimated dispersion parameter will be >1. Failure to estimate and adjust for this dispersion may lead to inaccurate statistical inference.
 
-`QuasiGLM.jl` provides a simple interface for adjusting existing Poisson and Binomial `GLM.jl` models to enable better statistical inference through adjustments to standard errors which flows through to updated test statistics, *p*-values, and confidence intervals.
+`QuasiGLM.jl` is a simple package that provides intuitive one-line-of-code adjustments to existing Poisson and Binomial `GLM.jl` models. It achieves this through adjustments to standard errors which flows through to updated test statistics, *p*-values, and confidence intervals.
 
 ## Usage
 
