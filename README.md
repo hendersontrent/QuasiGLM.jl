@@ -18,7 +18,7 @@ Pkg.add("QuasiGLM")
 1. quasipoisson
 2. quasibinomial
 
-While not explicit probability distributions, these models are useful in a variety of contexts as they enable the modelling of overdispersion in the data. If the data is indeed overdispersed, the estimated dispersion parameter will be >1. Failure to estimate this dispersion may lead to inaccurate statistical inference.
+While neither defines an explicit probability distribution, these models are useful in a variety of contexts as they enable the modelling of overdispersion in data. If the data is indeed overdispersed, the estimated dispersion parameter will be >1. Failure to estimate and adjust for this dispersion may lead to inaccurate statistical inference.
 
 `QuasiGLM.jl` provides a simple interface for adjusting existing Poisson and Binomial `GLM.jl` models to enable better statistical inference through adjustments to standard errors which flows through to updated test statistics, *p*-values, and confidence intervals.
 
@@ -33,5 +33,5 @@ dobson = DataFrame(Counts = [18,17,15,20,10,20,25,13,12], Outcome = categorical(
 
 gm = fit(GeneralizedLinearModel, @formula(Counts ~ Outcome + Treatment), dobson, Poisson())
 
-testOutputs = AdjustGLMToQuasi(gm, dobson; level=0.95)
+testOutputs = AdjustQuasiGLM(gm, dobson; level=0.95)
 ```
