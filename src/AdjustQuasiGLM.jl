@@ -1,11 +1,11 @@
 """
-    AdjustGLMToQuasi(model, ϕ; level)
+    AdjustQuasiGLM(model, ϕ; level)
 
 Estimates dispersion parameter, adjusts original GLM to reflect the dispersion and returns results in a pretty DataFrame.
 
 Usage:
 ```julia-repl
-AdjustGLMToQuasi(model, ϕ; level)
+AdjustQuasiGLM(model, ϕ; level)
 ```
 Arguments:
 - `model` : The `GLM` model.
@@ -13,7 +13,7 @@ Arguments:
 - `level` : The desired degree of confidence.
 """
 
-function AdjustGLMToQuasi(model::StatsModels.TableRegressionModel, data::DataFrame; level::Real=0.95)
+function AdjustQuasiGLM(model::StatsModels.TableRegressionModel, data::DataFrame; level::Real=0.95)
     
     # Calculate Pearson residuals
 
