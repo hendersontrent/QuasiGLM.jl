@@ -4,7 +4,7 @@ Adjust Poisson and Binomial Generalised Linear Models to their quasi equivalents
 
 ## Installation
 
-You can install `QuasiGLM.jl` from the Julia Registry once it has been accepted via:
+You can install `QuasiGLM.jl` from the Julia Registry via:
 
 ```
 using Pkg
