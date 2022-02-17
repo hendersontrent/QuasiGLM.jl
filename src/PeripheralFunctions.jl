@@ -1,8 +1,6 @@
 """
     PearsonResiduals(model, data)
-
 Calculates Pearson residuals between model predicted values and the actual response variable values.
-
 Usage:
 ```julia-repl
 PearsonResiduals(model, data)
@@ -32,9 +30,7 @@ end
 
 """
     EstimateDispersionParameter(residuals, model)
-
 Estimates the dispersion parameter ϕ by standardising the sum of squared Pearson residuals against the residual degrees of freedom.
-
 Usage:
 ```julia-repl
 EstimateDispersionParameter(residuals, model)
@@ -56,9 +52,7 @@ end
 
 """
     coefarray(model, ϕ; level)
-
 Calculates relevant statistics for inference based of estimates and dispersion-adjusted standard errors and returns results in a concatenated array.
-
 Usage:
 ```julia-repl
 coefarray(model, ϕ; level)

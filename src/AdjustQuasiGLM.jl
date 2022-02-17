@@ -1,8 +1,6 @@
 """
     AdjustQuasiGLM(model, ϕ; level)
-
 Estimates dispersion parameter, adjusts original GLM to reflect the dispersion and returns results in a pretty DataFrame.
-
 Usage:
 ```julia-repl
 AdjustQuasiGLM(model, ϕ; level)
