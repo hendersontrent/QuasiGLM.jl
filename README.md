@@ -35,7 +35,7 @@ gm = fit(GeneralizedLinearModel, @formula(Counts ~ Outcome + Treatment), dobson,
 testOutputs = AdjustQuasiGLM(gm, dobson; level=0.95)
 ```
 
-And here's a binomial to quasibinomial example using the leaf blotch dataset (McCullagh and Nelder (1989, Ch. 9.2.4)) as seen in multiple textbooks and the[SAS documentation](https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect016.htm):
+And here's a binomial to quasibinomial example using the leaf blotch dataset (McCullagh and Nelder (1989, Ch. 9.2.4)) as seen in multiple textbooks and the [SAS documentation](https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect016.htm):
 
 ```
 using DataFrames, CategoricalArrays, GLM, QuasiGLM
@@ -49,9 +49,9 @@ testOutputs2 = AdjustQuasiGLM(gm2, blotchData; level=0.95)
 
 ### Comparison to R results
 
-Note that results do not exactly equal the `R` equivalent of GLMs fit with `quasibinomial` or `quasipoisson` families. While explorations are continuing, it is believed to be the result of differences in the optimisation methods in the GLM machinery and floating point calculations.
+Note that results do not exactly equal the `R` equivalent of GLMs fit with `quasibinomial` or `quasipoisson` families. While explorations are continuing, the discrepancy is believed to be the result of differences in optimisation methods in the GLM machinery and floating point calculations.
 
-For example, in the quasipoisson example presented above, the dispersion parameter returned by `QuasiGLM.jl` and `R`'s `glm` function with quasipoisson family are equivalent, and the numerical values for the `Intercept` and `Outcome` in the summary coefficient table are also equivalent. However, `Treatment` variable exhibits different `Estimate` values despite exhibiting the same standard error and *p*-values.
+For example, in the quasipoisson example presented above, the dispersion parameter returned by `QuasiGLM.jl` and `R`'s `glm` function with quasipoisson family are equivalent, and the numerical values for the `Intercept` and `Outcome` in the summary coefficient table are also equivalent. However, the `Treatment` variable exhibits different coefficient estimates despite exhibiting the same standard error and *p*-values.
 
 Here is the `R` code to test it:
 
