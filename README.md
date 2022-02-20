@@ -72,6 +72,7 @@ If you use `QuasiGLM.jl` in your work, please cite it using the following (inclu
   author={Henderson, Trent},
   year={2022},
   month={2},
-  url={https://github.com/hendersontrent/QuasiGLM.jl}
+  url={https://zenodo.org/badge/latestdoi/459915317},
+  doi={10.5281/zenodo.6164674}
 }
 ```
