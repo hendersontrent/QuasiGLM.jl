@@ -1,5 +1,7 @@
 # QuasiGLM
 
+[![DOI](https://zenodo.org/badge/459915317.svg)](https://zenodo.org/badge/latestdoi/459915317)
+
 Adjust Poisson and Binomial Generalised Linear Models to their quasi equivalents for dispersed data
 
 ## Installation
